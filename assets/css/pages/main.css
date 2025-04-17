@@ -1,0 +1,205 @@
+header {
+  background-color: #690D2C;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+header .nav-list ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+header .nav-list ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+header .nav-list ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+header .nav-list ul li a:hover::after {
+  width: 100%;
+}
+header .mobile-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+header .mobile-menu .line {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+  header .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: height 0.3s ease;
+  }
+  header .nav-list ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  header .nav-list ul li {
+    margin: 20px 0;
+  }
+  header .nav-list.active {
+    height: 220px;
+  }
+  header .mobile-menu {
+    display: flex;
+  }
+}
+
+.sectionUm {
+  background: url(../../images/pages/imgSectionUm.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionUm .conteudo {
+  width: 70%;
+  height: 80%;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  color: #ffffff;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .sectionUm .conteudo {
+    width: 85%;
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .sectionUm .conteudo {
+    width: 90%;
+    gap: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .sectionUm .conteudo {
+    padding-top: 2rem;
+    gap: 20px;
+  }
+}
+.sectionUm .conteudo .header-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .sectionUm .conteudo .header-info {
+    gap: 24px;
+  }
+}
+.sectionUm .conteudo .header-info h2 {
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .sectionUm .conteudo .header-info h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .sectionUm .conteudo .header-info h2 {
+    font-size: 18px;
+  }
+}
+.sectionUm .conteudo .main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-size: 70px;
+  font-family: "Merriweather", serif;
+}
+@media (max-width: 768px) {
+  .sectionUm .conteudo .main-title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .sectionUm .conteudo .main-title {
+    font-size: 30px;
+  }
+}
+.sectionUm .conteudo .event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .sectionUm .conteudo .event-info {
+    gap: 20px;
+  }
+}
+.sectionUm .conteudo .event-info p {
+  font-size: 22px;
+}
+@media (max-width: 768px) {
+  .sectionUm .conteudo .event-info p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .sectionUm .conteudo .event-info p {
+    font-size: 17px;
+  }
+}
+.sectionUm .conteudo .event-info button:hover {
+  background-color: #910808;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/pages/_header.scss%22,%22../../scss/pages/_sectionUm.scss%22,%22../../scss/global/_normalize.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIJ;EAzDJ;IA0DM;;EAEA;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;;EAEA;IACE;;EAIJ;IACE;;EAIJ;IACE;;;;ACvFR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EAZJ;IAaQ;IACA;;;AAGJ;EAjBJ;IAkBQ;IACA;;;AAGJ;EAtBJ;IAuBQ;IACA;;;AAGJ;EACI;EACA;EACA;EACA;;AAEA;EANJ;IAOQ;;;AAGJ;EACI;;AAEA;EAHJ;IAIQ;;;AAGJ;EAPJ;IAQQ;;;AAKZ;EACI;EACA;EACA;EACA;EACA;EACA;;AAEI;EARR;IASY;;;AAGJ;EAZR;IAaY;;;AAIZ;EACI;EACA;EACA;EACA;;AAEA;EANJ;IAOQ;;;AAGJ;EACI;;AAEA;EAHJ;IAIQ;;;AAGJ;EAPJ;IAQQ;;;AAKJ;EACI;EACA;EACA;EACA;EACA;;;AC1GpB;EACI;EACA;EACA;EACA%22,%22file%22:%22main.css%22%7D */
